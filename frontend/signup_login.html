@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/auth.css">
+  </head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="card-header">
+      <div class="logo-row">
+        <!-- <div class="logo-icon"><i class="ti ti-plant" style="color:white;font-size:18px;" aria-hidden="true"></i></div> -->
+        <div class="logo-text">🌾 KrishiAI</div>
+      </div>
+      <div class="header-sub">Smart crop recommendations for Indian farmers</div>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('login')">Sign In</button>
+        <button class="tab" onclick="switchTab('signup')">Create Account</button>
+      </div>
+    </div>
+
+    <div class="card-body">
+
+      <div id="section-login" class="form-section visible">
+        <div class="form-title">Welcome back</div>
+        <div class="form-subtitle">Enter your credentials to continue</div>
+
+        <div id="login-success" class="success-msg">
+          <i class="ti ti-circle-check" style="font-size:18px;" aria-hidden="true"></i>
+          Login successful! Redirecting to dashboard...
+        </div>
+
+        <div class="field">
+          <label>Email address</label>
+          <input type="email" id="login-email" placeholder="ramesh@gmail.com" />
+        </div>
+
+        <div class="field">
+          <label>Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="login-pw" placeholder="Enter your password" />
+            <button class="toggle-pw" onclick="togglePw('login-pw', this)" aria-label="Toggle password visibility">
+              <i class="ti ti-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-submit" onclick="handleLogin()">Sign In</button>
+
+        <div class="switch-text">
+          Don't have an account? <a onclick="switchTab('signup')">Create one</a>
+        </div>
+      </div>
+
+      <div id="section-signup" class="form-section">
+        <div class="form-title">Create your account</div>
+        <div class="form-subtitle">Join thousands of farmers using AI predictions</div>
+
+        <div id="signup-success" class="success-msg">
+          <i class="ti ti-circle-check" style="font-size:18px;" aria-hidden="true"></i>
+          Account created! Please sign in.
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Full name</label>
+            <input type="text" id="su-name" placeholder="Ramesh Kumar" />
+          </div>
+          <div class="field">
+            <label>Phone number</label>
+            <input type="tel" id="su-phone" placeholder="9876543210" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email address</label>
+          <input type="email" id="su-email" placeholder="ramesh@gmail.com" />
+        </div>
+
+        <div class="field-row">
+  <div class="field">
+    <label>State</label>
+    <select id="su-state">
+      <option value="">Select State</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>District</label>
+    <select id="su-district">
+      <option value="">Select District</option>
+    </select>
+  </div>
+</div>
+
+<div class="field">
+  <button type="button" class="location-btn" onclick="getLocation()">
+    📍 Use Current Location
+  </button>
+</div>
+
+<div class="field-row">
+  <div class="field">
+    <label>Land (Acres)</label>
+    <input type="number" id="su-acres" placeholder="5" min="0.1" step="0.1" />
+  </div>
+
+  <div class="field">
+    <label>Land Type</label>
+    <select id="su-landtype">
+      <option value="">Select</option>
+      <option>Owned</option>
+      <option>Leased</option>
+    </select>
+  </div>
+</div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="su-pw" placeholder="Min 6 characters" />
+              <button class="toggle-pw" onclick="togglePw('su-pw', this)" aria-label="Toggle password visibility">
+                <i class="ti ti-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Confirm password</label>
+            <div class="password-wrapper">
+              <input type="password" id="su-pw2" placeholder="Repeat password" />
+              <button class="toggle-pw" onclick="togglePw('su-pw2', this)" aria-label="Toggle password visibility">
+                <i class="ti ti-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-submit" onclick="handleSignup()">Create Account</button>
+
+        <div class="switch-text">
+          Already have an account? <a onclick="switchTab('login')">Sign in</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>

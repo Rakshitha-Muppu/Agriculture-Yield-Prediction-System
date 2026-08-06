@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation | KrishiAI</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/crop_recommendation.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="main-header">
+
+            <div class="logo">
+                🌾 KrishiAI
+            </div>
+
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="crop_recommendation.html" class="active">Crop Recommendation</a>
+                <a href="history.html">History</a>
+            </nav>
+
+            <div class="user-section">
+                <span class="user-name">👤 Ramesh Kumar</span>
+                <a href="signup_login.html" class="logout-btn">Logout</a>
+            </div>
+
+        </header>
+
+        <h1 class="page-title">
+            🌱 Crop Recommendation System
+        </h1>
+
+        <div class="recommend-card">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="location" placeholder="Enter Location" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Temperature (°C)</label>
+                    <input type="number" id="temperature" value="32" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Humidity (%)</label>
+                    <input type="number" id="humidity" value="68" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Rainfall (mm)</label>
+                    <input type="number" id="rainfall" value="120" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Soil Type</label>
+
+                    <select id="soil">
+                        <option value="">Select Soil Type</option>
+                        <option>Black Soil</option>
+                        <option>Red Soil</option>
+                        <option>Loamy Soil</option>
+                        <option>Sandy Soil</option>
+                        <option>Alluvial Soil</option>
+                        <option>Laterite Soil</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Season</label>
+
+                    <select id="season">
+                        <option value="">Select Season</option>
+                        <option>Kharif</option>
+                        <option>Rabi</option>
+                        <option>Zaid</option>
+                        <option>Whole Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Previous Crop</label>
+
+                    <select id="crop">
+
+                        <option value="">Select Previous Crop</option>
+                        <option>Rice</option>
+                        <option>Maize</option>
+                        <option>Chickpea</option>
+                        <option>Kidneybeans</option>
+                        <option>Pigeonpeas</option>
+                        <option>Mothbeans</option>
+                        <option>Mungbean</option>
+                        <option>Blackgram</option>
+                        <option>Lentil</option>
+                        <option>Pomegranate</option>
+                        <option>Banana</option>
+                        <option>Mango</option>
+                        <option>Grapes</option>
+                        <option>Watermelon</option>
+                        <option>Muskmelon</option>
+                        <option>Apple</option>
+                        <option>Orange</option>
+                        <option>Papaya</option>
+                        <option>Coconut</option>
+                        <option>Cotton</option>
+                        <option>Jute</option>
+                        <option>Coffee</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Land Acres</label>
+                    <input type="number" id="land_acres" placeholder="Enter land acres">
+                </div>
+
+
+            </div>
+
+            <button class="btn" onclick="recommendCrop()">
+                🌾 Get Recommendations
+            </button>
+
+            <div class="result-box" id="resultBox">
+
+                <h3>Top Recommended Crops</h3>
+
+                <div id="results"></div>
+
+            </div>
+            <script src="js/crop_recommendation.js"></script>
+</body>
+
+</html>

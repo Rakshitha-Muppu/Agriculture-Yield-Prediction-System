@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KrishiAI - Prediction History</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/history.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="main-header">
+
+<div class="logo">
+🌾 KrishiAI
+</div>
+
+<nav class="nav-links">
+<a href="dashboard.html">Dashboard</a>
+<a href="crop_recommendation.html">Crop Recommendation</a>
+<a href="history.html" class="active">History</a>
+</nav>
+
+<div class="user-section">
+<span class="user-name">👤 Ramesh Kumar</span>
+<a href="signup_login.html" class="logout-btn">Logout</a>
+</div>
+
+</header>
+
+<div class="page-title">
+<h2>Prediction History 📊</h2>
+<p>View all your previous crop recommendations and yield predictions.</p>
+</div>
+
+<div class="history-card">
+
+<table>
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Recommended Crop</th>
+<th>Location</th>
+<th>Season</th>
+</tr>
+</thead>
+
+<tbody id="historyTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+<script src="js/history.js"></script>
+</body>
+</html>
